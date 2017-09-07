@@ -1,0 +1,34 @@
+{
+  "id" : "film_text.idx_title_description",
+  "name" : "idx_title_description",
+  "method" : "FULLTEXT",
+  "unique" : false,
+  "type" : {
+    "table" : {
+      "ref" : {
+        "id" : "film_text",
+        "tableName" : "film_text",
+        "containerName" : "sakila"
+      },
+      "columns" : [ {
+        "ref" : {
+          "container" : "sakila",
+          "tableName" : "film_text",
+          "columnName" : "title"
+        },
+        "position" : 1
+      }, {
+        "ref" : {
+          "container" : "sakila",
+          "tableName" : "film_text",
+          "columnName" : "description"
+        },
+        "position" : 2
+      } ]
+    }
+  },
+  "properties" : {
+    "keyBlockSize" : 0,
+    "comment" : ""
+  }
+}
